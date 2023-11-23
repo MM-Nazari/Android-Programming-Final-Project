@@ -1,0 +1,191 @@
+@Composable
+fun TextPage(modifier: Modifier = Modifier) {
+    Box(
+        modifier = modifier
+                .requiredWidth(width = 360.dp)
+                .requiredHeight(height = 834.dp)
+                .background(brush = Brush.linearGradient(
+                    0f to Color(0xffc72c3f), 
+					1f to Color.Black,
+                    start = Offset(180f, 0f),
+                    end = Offset(180f, 834f)))
+        ) {
+        Box(
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 33.dp,
+                                    y = 39.dp)
+                        .requiredWidth(width = 300.dp)
+                        .requiredHeight(height = 207.dp)
+            ) {
+            Box(
+                modifier = Modifier
+                                .requiredWidth(width = 300.dp)
+                                .requiredHeight(height = 207.dp)
+                ) {
+                Box(
+                    modifier = Modifier
+                                        .requiredWidth(width = 300.dp)
+                                        .requiredHeight(height = 207.dp)
+                    ) {
+                    Text(
+                        text = "اولویت بالا\n",
+                        color = Color.White,
+                        style = TextStyle(
+                                                fontSize = 20.sp),
+                        modifier = Modifier
+                                                .align(alignment = Alignment.TopStart)
+                                                .offset(x = 108.dp,
+                                                                        y = 0.dp))
+                    TextButton(
+                        onClick = { },
+                        colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
+                        modifier = Modifier
+                                                .align(alignment = Alignment.TopStart)
+                                                .offset(x = 128.dp,
+                                                                        y = 100.dp)
+                                                .requiredWidth(width = 38.dp)
+                                                .requiredHeight(height = 40.dp)){ }
+                    TextField(
+                        value = "",
+                        onValueChange = {},
+                        modifier = Modifier
+                                                .align(alignment = Alignment.TopStart)
+                                                .offset(x = 0.dp,
+                                                                        y = 57.dp)
+                                                .requiredWidth(width = 300.dp)
+                                                .requiredHeight(height = 150.dp))
+                    }
+                }
+            }
+        Box(
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 22.dp,
+                                    y = 30.dp)
+                        .requiredWidth(width = 322.dp)
+                        .requiredHeight(height = 179.dp)
+                        .clip(shape = RoundedCornerShape(15.dp))
+                        .background(color = Color(0xffd9d9d9)))
+        Box(
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 33.dp,
+                                    y = 262.dp)
+                        .requiredWidth(width = 300.dp)
+                        .requiredHeight(height = 207.dp)
+            ) {
+            Box(
+                modifier = Modifier
+                                .requiredWidth(width = 300.dp)
+                                .requiredHeight(height = 207.dp)
+                ) {
+                Box(
+                    modifier = Modifier
+                                        .requiredWidth(width = 300.dp)
+                                        .requiredHeight(height = 207.dp)
+                    ) {
+                    Text(
+                        text = "اولویت متوسط\n",
+                        color = Color.White,
+                        style = TextStyle(
+                                                fontSize = 20.sp),
+                        modifier = Modifier
+                                                .align(alignment = Alignment.TopStart)
+                                                .offset(x = 89.dp,
+                                                                        y = 0.dp))
+                    TextButton(
+                        onClick = { },
+                        colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
+                        modifier = Modifier
+                                                .align(alignment = Alignment.TopStart)
+                                                .offset(x = 128.dp,
+                                                                        y = 100.dp)
+                                                .requiredWidth(width = 38.dp)
+                                                .requiredHeight(height = 40.dp)){ }
+                    TextField(
+                        value = "",
+                        onValueChange = {},
+                        modifier = Modifier
+                                                .align(alignment = Alignment.TopStart)
+                                                .offset(x = 0.dp,
+                                                                        y = 57.dp)
+                                                .requiredWidth(width = 300.dp)
+                                                .requiredHeight(height = 150.dp))
+                    }
+                }
+            }
+        Box(
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 22.dp,
+                                    y = 246.dp)
+                        .requiredWidth(width = 322.dp)
+                        .requiredHeight(height = 179.dp)
+                        .clip(shape = RoundedCornerShape(15.dp))
+                        .background(color = Color(0xffd9d9d9)))
+        Box(
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 22.dp,
+                                    y = 467.dp)
+                        .requiredWidth(width = 322.dp)
+                        .requiredHeight(height = 179.dp)
+                        .clip(shape = RoundedCornerShape(15.dp))
+                        .background(color = Color(0xffd9d9d9)))
+        Box(
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 33.dp,
+                                    y = 485.dp)
+                        .requiredWidth(width = 300.dp)
+                        .requiredHeight(height = 207.dp)
+            ) {
+            Box(
+                modifier = Modifier
+                                .requiredWidth(width = 300.dp)
+                                .requiredHeight(height = 207.dp)
+                ) {
+                Box(
+                    modifier = Modifier
+                                        .requiredWidth(width = 300.dp)
+                                        .requiredHeight(height = 207.dp)
+                    ) {
+                    Text(
+                        text = "اولویت پایین\n",
+                        color = Color.White,
+                        style = TextStyle(
+                                                fontSize = 20.sp),
+                        modifier = Modifier
+                                                .align(alignment = Alignment.TopStart)
+                                                .offset(x = 99.dp,
+                                                                        y = 0.dp))
+                    TextButton(
+                        onClick = { },
+                        colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
+                        modifier = Modifier
+                                                .align(alignment = Alignment.TopStart)
+                                                .offset(x = 128.dp,
+                                                                        y = 100.dp)
+                                                .requiredWidth(width = 38.dp)
+                                                .requiredHeight(height = 40.dp)){ }
+                    TextField(
+                        value = "",
+                        onValueChange = {},
+                        modifier = Modifier
+                                                .align(alignment = Alignment.TopStart)
+                                                .offset(x = 0.dp,
+                                                                        y = 57.dp)
+                                                .requiredWidth(width = 300.dp)
+                                                .requiredHeight(height = 150.dp))
+                    }
+                }
+            }
+        }
+ }
+
+@Preview(widthDp = 360, heightDp = 834)
+@Composable
+private fun TextPagePreview() {
+    TextPage(Modifier)
+ }

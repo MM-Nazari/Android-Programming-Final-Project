@@ -1,0 +1,147 @@
+@Composable
+fun HomePage(modifier: Modifier = Modifier) {
+    Box(
+        modifier = modifier
+                .requiredWidth(width = 360.dp)
+                .requiredHeight(height = 838.dp)
+                .background(brush = Brush.linearGradient(
+                    0f to Color(0xffca263a), 
+					1f to Color.Black,
+                    start = Offset(180f, 0f),
+                    end = Offset(180f, 838f)))
+        ) {
+        TextButton(
+            onClick = { },
+            colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 142.dp,
+                                    y = 709.dp)
+                        .requiredWidth(width = 77.dp)
+                        .requiredHeight(height = 70.dp)
+            ) {
+            Box(
+                modifier = Modifier
+                                .requiredWidth(width = 77.dp)
+                                .requiredHeight(height = 70.dp)
+                ) {
+                Box(
+                    modifier = Modifier
+                                        .requiredWidth(width = 77.dp)
+                                        .requiredHeight(height = 70.dp)
+                    ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.ellipse3),
+                        contentDescription = "Ellipse 3",
+                        modifier = Modifier
+                                                .fillMaxSize())
+                    }
+                }
+            }
+        TextButton(
+            onClick = { },
+            colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 97.dp,
+                                    y = 50.dp)
+                        .requiredWidth(width = 165.dp)
+                        .requiredHeight(height = 168.dp)
+            ) {
+            Box(
+                modifier = Modifier
+                                .requiredWidth(width = 165.dp)
+                                .requiredHeight(height = 168.dp)
+                ) {
+                Box(
+                    modifier = Modifier
+                                        .requiredWidth(width = 165.dp)
+                                        .requiredHeight(height = 168.dp)
+                                        .background(color = Color(0xffd91d34)))
+                Text(
+                    text = "فوریت بالا",
+                    color = Color(0xff201a1a).copy(alpha = 0.5f),
+                    style = TextStyle(
+                                        fontSize = 20.sp),
+                    modifier = Modifier
+                                        .align(alignment = Alignment.Center)
+                                        .offset(x = 15.191879272460938.dp,
+                                                            y = 22.dp)
+                                        .requiredWidth(width = 107.dp)
+                                        .requiredHeight(height = 74.dp))
+                }
+            }
+        TextButton(
+            onClick = { },
+            colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 97.dp,
+                                    y = 241.dp)
+                        .requiredWidth(width = 165.dp)
+                        .requiredHeight(height = 168.dp)
+            ) {
+            Box(
+                modifier = Modifier
+                                .requiredWidth(width = 165.dp)
+                                .requiredHeight(height = 168.dp)
+                ) {
+                Box(
+                    modifier = Modifier
+                                        .requiredWidth(width = 165.dp)
+                                        .requiredHeight(height = 168.dp)
+                                        .background(color = Color(0xffd91d34)))
+                Text(
+                    text = "فوریت متوسط",
+                    color = Color(0xff201a1a).copy(alpha = 0.5f),
+                    style = TextStyle(
+                                        fontSize = 20.sp),
+                    modifier = Modifier
+                                        .align(alignment = Alignment.Center)
+                                        .offset(x = 0.1918792724609375.dp,
+                                                            y = 22.dp)
+                                        .requiredWidth(width = 127.dp)
+                                        .requiredHeight(height = 74.dp))
+                }
+            }
+        TextButton(
+            onClick = { },
+            colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 98.dp,
+                                    y = 432.dp)
+                        .requiredWidth(width = 165.dp)
+                        .requiredHeight(height = 168.dp)
+            ) {
+            Box(
+                modifier = Modifier
+                                .requiredWidth(width = 165.dp)
+                                .requiredHeight(height = 168.dp)
+                ) {
+                Box(
+                    modifier = Modifier
+                                        .requiredWidth(width = 165.dp)
+                                        .requiredHeight(height = 168.dp)
+                                        .background(color = Color(0xffd91d34)))
+                Text(
+                    text = "فوریت پایین",
+                    color = Color(0xff201a1a).copy(alpha = 0.5f),
+                    style = TextStyle(
+                                        fontSize = 20.sp),
+                    modifier = Modifier
+                                        .align(alignment = Alignment.Center)
+                                        .offset(x = 0.1918792724609375.dp,
+                                                            y = 22.dp)
+                                        .requiredWidth(width = 107.dp)
+                                        .requiredHeight(height = 74.dp))
+                }
+            }
+        }
+ }
+
+@Preview(widthDp = 360, heightDp = 838)
+@Composable
+private fun HomePagePreview() {
+    HomePage(Modifier)
+ }

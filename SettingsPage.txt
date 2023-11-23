@@ -1,0 +1,125 @@
+@Composable
+fun SettingsPage(modifier: Modifier = Modifier) {
+    Box(
+        modifier = modifier
+                .requiredWidth(width = 360.dp)
+                .requiredHeight(height = 834.dp)
+                .background(brush = Brush.linearGradient(
+                    0f to Color(0xffc72c3f), 
+					1f to Color.Black,
+                    start = Offset(180f, 0f),
+                    end = Offset(180f, 834f)))
+        ) {
+        Box(
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 146.dp,
+                                    y = 480.dp)
+                        .requiredWidth(width = 68.dp)
+                        .requiredHeight(height = 65.dp)
+            ) {
+            TextButton(
+                onClick = { },
+                colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
+                modifier = Modifier
+                                .requiredWidth(width = 68.dp)
+                                .requiredHeight(height = 65.dp)
+                ) {
+                Box(
+                    modifier = Modifier
+                                        .requiredWidth(width = 68.dp)
+                                        .requiredHeight(height = 65.dp)
+                    ) {
+                    Box(
+                        modifier = Modifier
+                                                .requiredWidth(width = 68.dp)
+                                                .requiredHeight(height = 65.dp)
+                        ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.ellipse4),
+                            contentDescription = "Ellipse 4",
+                            modifier = Modifier
+                                                        .requiredWidth(width = 68.dp)
+                                                        .requiredHeight(height = 65.dp))
+                        }
+                    }
+                }
+            }
+        Box(
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 146.dp,
+                                    y = 318.dp)
+                        .requiredWidth(width = 68.dp)
+                        .requiredHeight(height = 65.dp)
+            ) {
+            TextButton(
+                onClick = { },
+                colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
+                modifier = Modifier
+                                .requiredWidth(width = 68.dp)
+                                .requiredHeight(height = 65.dp)
+                ) {
+                Box(
+                    modifier = Modifier
+                                        .requiredWidth(width = 68.dp)
+                                        .requiredHeight(height = 65.dp)
+                    ) {
+                    Box(
+                        modifier = Modifier
+                                                .requiredWidth(width = 68.dp)
+                                                .requiredHeight(height = 65.dp)
+                        ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.ellipse4),
+                            contentDescription = "Ellipse 4",
+                            modifier = Modifier
+                                                        .requiredWidth(width = 68.dp)
+                                                        .requiredHeight(height = 65.dp))
+                        }
+                    }
+                }
+            }
+        Box(
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 146.dp,
+                                    y = 157.dp)
+                        .requiredWidth(width = 68.dp)
+                        .requiredHeight(height = 65.dp)
+            ) {
+            TextButton(
+                onClick = { },
+                colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
+                modifier = Modifier
+                                .requiredWidth(width = 68.dp)
+                                .requiredHeight(height = 65.dp)
+                ) {
+                Box(
+                    modifier = Modifier
+                                        .requiredWidth(width = 68.dp)
+                                        .requiredHeight(height = 65.dp)
+                    ) {
+                    Box(
+                        modifier = Modifier
+                                                .requiredWidth(width = 68.dp)
+                                                .requiredHeight(height = 65.dp)
+                        ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.ellipse4),
+                            contentDescription = "Ellipse 4",
+                            modifier = Modifier
+                                                        .requiredWidth(width = 68.dp)
+                                                        .requiredHeight(height = 65.dp))
+                        }
+                    }
+                }
+            }
+        }
+ }
+
+@Preview(widthDp = 360, heightDp = 834)
+@Composable
+private fun SettingsPagePreview() {
+    SettingsPage(Modifier)
+ }
