@@ -19,6 +19,12 @@
             android:theme="@style/Theme.Project_AndroidCourse" />
 
         <activity
+            android:name=".SettingsPageActivity"
+            android:exported="false"
+            android:label="SettingsPage"
+            android:theme="@style/Theme.Project_AndroidCourse" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

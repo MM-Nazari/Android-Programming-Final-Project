@@ -15,7 +15,7 @@ data class SOSDataEntity (
     val text: String,
     val priority: Short
 ) {
-    constructor(): this(0,"متن پیشفرض", 0)//, 0.toUShort())
+    constructor(): this(0,"کمک", 0)//, 0.toUShort())
 
 }
 
