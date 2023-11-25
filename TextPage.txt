@@ -1,12 +1,12 @@
 @Composable
-fun TextPage(modifier: Modifier = Modifier) {
+fun TelephoneInterFace(modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
                 .requiredWidth(width = 360.dp)
                 .requiredHeight(height = 834.dp)
                 .background(brush = Brush.linearGradient(
                     0f to Color(0xffc72c3f), 
-					1f to Color.Black,
+1f to Color.Black,
                     start = Offset(180f, 0f),
                     end = Offset(180f, 834f)))
         ) {
@@ -37,15 +37,15 @@ fun TextPage(modifier: Modifier = Modifier) {
                                                 .align(alignment = Alignment.TopStart)
                                                 .offset(x = 108.dp,
                                                                         y = 0.dp))
-                    TextButton(
-                        onClick = { },
-                        colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
+                    Image(
+                        painter = painterResource(id = R.drawable.icons8edit36hdpi1),
+                        contentDescription = "icons8-edit-36(-hdpi) 1",
                         modifier = Modifier
                                                 .align(alignment = Alignment.TopStart)
                                                 .offset(x = 128.dp,
                                                                         y = 100.dp)
                                                 .requiredWidth(width = 38.dp)
-                                                .requiredHeight(height = 40.dp)){ }
+                                                .requiredHeight(height = 40.dp))
                     TextField(
                         value = "",
                         onValueChange = {},
@@ -55,6 +55,15 @@ fun TextPage(modifier: Modifier = Modifier) {
                                                                         y = 57.dp)
                                                 .requiredWidth(width = 300.dp)
                                                 .requiredHeight(height = 150.dp))
+                    TextButton(
+                        onClick = { },
+                        colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
+                        modifier = Modifier
+                                                .align(alignment = Alignment.TopStart)
+                                                .offset(x = 116.dp,
+                                                                        y = 100.dp)
+                                                .requiredWidth(width = 63.dp)
+                                                .requiredHeight(height = 51.dp)){ }
                     }
                 }
             }
@@ -94,15 +103,15 @@ fun TextPage(modifier: Modifier = Modifier) {
                                                 .align(alignment = Alignment.TopStart)
                                                 .offset(x = 89.dp,
                                                                         y = 0.dp))
-                    TextButton(
-                        onClick = { },
-                        colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
+                    Image(
+                        painter = painterResource(id = R.drawable.icons8edit36hdpi1),
+                        contentDescription = "icons8-edit-36(-hdpi) 1",
                         modifier = Modifier
                                                 .align(alignment = Alignment.TopStart)
                                                 .offset(x = 128.dp,
                                                                         y = 100.dp)
                                                 .requiredWidth(width = 38.dp)
-                                                .requiredHeight(height = 40.dp)){ }
+                                                .requiredHeight(height = 40.dp))
                     TextField(
                         value = "",
                         onValueChange = {},
@@ -112,6 +121,15 @@ fun TextPage(modifier: Modifier = Modifier) {
                                                                         y = 57.dp)
                                                 .requiredWidth(width = 300.dp)
                                                 .requiredHeight(height = 150.dp))
+                    TextButton(
+                        onClick = { },
+                        colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
+                        modifier = Modifier
+                                                .align(alignment = Alignment.TopStart)
+                                                .offset(x = 116.dp,
+                                                                        y = 97.dp)
+                                                .requiredWidth(width = 63.dp)
+                                                .requiredHeight(height = 48.dp)){ }
                     }
                 }
             }
@@ -160,15 +178,15 @@ fun TextPage(modifier: Modifier = Modifier) {
                                                 .align(alignment = Alignment.TopStart)
                                                 .offset(x = 99.dp,
                                                                         y = 0.dp))
-                    TextButton(
-                        onClick = { },
-                        colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
+                    Image(
+                        painter = painterResource(id = R.drawable.icons8edit36hdpi1),
+                        contentDescription = "icons8-edit-36(-hdpi) 1",
                         modifier = Modifier
                                                 .align(alignment = Alignment.TopStart)
                                                 .offset(x = 128.dp,
                                                                         y = 100.dp)
                                                 .requiredWidth(width = 38.dp)
-                                                .requiredHeight(height = 40.dp)){ }
+                                                .requiredHeight(height = 40.dp))
                     TextField(
                         value = "",
                         onValueChange = {},
@@ -178,6 +196,15 @@ fun TextPage(modifier: Modifier = Modifier) {
                                                                         y = 57.dp)
                                                 .requiredWidth(width = 300.dp)
                                                 .requiredHeight(height = 150.dp))
+                    TextButton(
+                        onClick = { },
+                        colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
+                        modifier = Modifier
+                                                .align(alignment = Alignment.TopStart)
+                                                .offset(x = 119.dp,
+                                                                        y = 94.dp)
+                                                .requiredWidth(width = 58.dp)
+                                                .requiredHeight(height = 53.dp)){ }
                     }
                 }
             }
@@ -186,6 +213,6 @@ fun TextPage(modifier: Modifier = Modifier) {
 
 @Preview(widthDp = 360, heightDp = 834)
 @Composable
-private fun TextPagePreview() {
-    TextPage(Modifier)
+private fun TelephoneInterFacePreview() {
+    TelephoneInterFace(Modifier)
  }
