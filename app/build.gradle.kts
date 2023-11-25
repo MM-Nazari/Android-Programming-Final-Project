@@ -56,6 +56,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.activity:activity-compose:1.8.0")
     implementation("androidx.room:room-runtime:2.6.0")
+    implementation("androidx.compose.ui:ui-text-android:1.5.4")
     kapt("androidx.room:room-compiler:2.6.0")
     implementation("androidx.room:room-ktx:2.6.0")
     kapt("android.arch.persistence.room:compiler:1.1.1")

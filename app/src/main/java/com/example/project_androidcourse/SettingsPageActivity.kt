@@ -1,8 +1,11 @@
 package com.example.project_androidcourse
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.viewModels
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -23,11 +26,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.ViewModel
 import com.example.project_androidcourse.ui.theme.Project_AndroidCourseTheme
 
 class SettingsPageActivity : ComponentActivity() {
 //    private val viewModel by viewModels<AddSettingsPageViewModel>()
-
+    private val viewModel by viewModels<SettingPageViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -38,7 +42,7 @@ class SettingsPageActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    SettingsPage()
+                    SettingsPage(addSosStarter =  viewModel::startAddSosActivity)
 
                 }
 
@@ -47,8 +51,25 @@ class SettingsPageActivity : ComponentActivity() {
     }
 }
 
+class SettingPageViewModel: ViewModel() {
+    fun startAddSosActivity() {
+        try {
+
+            val context = ContextHandler.get()
+            if(context != null) {
+                val intent = Intent(ContextHandler.get(), AddSosActivity::class.java)
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent)
+            }
+        } catch (ex: Exception) {
+            Log.e("Crash", ex.toString())
+        }
+    }
+
+}
+
 @Composable
-fun SettingsPage(modifier: Modifier = Modifier) {
+fun SettingsPage(modifier: Modifier = Modifier,  addSosStarter: () -> Unit) {
     Box(
         modifier = modifier
             .requiredWidth(width = 360.dp)
@@ -67,7 +88,7 @@ fun SettingsPage(modifier: Modifier = Modifier) {
                 .align(alignment = Alignment.TopStart)
                 .offset(
                     x = 146.dp,
-                    y = 480.dp
+                    y = 157.dp
                 )
                 .requiredWidth(width = 68.dp)
                 .requiredHeight(height = 65.dp)
@@ -108,7 +129,7 @@ fun SettingsPage(modifier: Modifier = Modifier) {
                         .requiredHeight(height = 65.dp)
             ) {
             TextButton(
-                onClick = { },
+                onClick = {addSosStarter()},
                 colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
                 modifier = Modifier
                                 .requiredWidth(width = 68.dp)
@@ -138,7 +159,7 @@ fun SettingsPage(modifier: Modifier = Modifier) {
             modifier = Modifier
                         .align(alignment = Alignment.TopStart)
                         .offset(x = 146.dp,
-                                    y = 157.dp)
+                                    y = 480.dp)
                         .requiredWidth(width = 68.dp)
                         .requiredHeight(height = 65.dp)
             ) {
@@ -175,5 +196,7 @@ fun SettingsPage(modifier: Modifier = Modifier) {
 @Preview(widthDp = 360, heightDp = 834)
 @Composable
 private fun SettingsPagePreview() {
-    SettingsPage(Modifier)
- }
+    Project_AndroidCourseTheme {
+        //MainPage(Modifier)
+    }
+}

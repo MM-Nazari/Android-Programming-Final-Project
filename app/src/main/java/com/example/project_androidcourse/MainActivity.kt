@@ -47,7 +47,7 @@ public class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MainPage(settingsPage = viewModel::startSettingsPageActivity,addSosStarter =  viewModel::startAddSosActivity)
+                    MainPage(settingsPage = viewModel::startSettingsPageActivity)
                 }
             }
         }
@@ -70,24 +70,10 @@ class MainActivityViewModel: ViewModel() {
             Log.e("Crash", ex.toString())
         }
     }
-    fun startAddSosActivity() {
-        try {
-
-        val context = ContextHandler.get()
-        if(context != null) {
-            val intent = Intent(ContextHandler.get(), AddSosActivity::class.java)
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(intent)
-        }
-        } catch (ex: Exception) {
-            Log.e("Crash", ex.toString())
-        }
-    }
-
 }
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainPage(modifier: Modifier = Modifier, addSosStarter: () -> Unit, settingsPage: () -> Unit) {
+fun MainPage(modifier: Modifier = Modifier, settingsPage: () -> Unit) {
     Box(
         modifier = modifier
             .requiredWidth(width = 360.dp)
@@ -198,7 +184,7 @@ fun MainPage(modifier: Modifier = Modifier, addSosStarter: () -> Unit, settingsP
                     modifier = Modifier
                         .align(alignment = Alignment.Center)
                         .offset(
-                            x = 0.1918792724609375.dp,
+                            x = 15.191879272460938.dp,
                             y = 22.dp
                         )
                         .requiredWidth(width = 127.dp)
@@ -206,7 +192,7 @@ fun MainPage(modifier: Modifier = Modifier, addSosStarter: () -> Unit, settingsP
             }
         }
         TextButton(
-            onClick = { addSosStarter()},
+            onClick = { },
             colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
             modifier = Modifier
                 .align(alignment = Alignment.TopStart)
@@ -235,7 +221,7 @@ fun MainPage(modifier: Modifier = Modifier, addSosStarter: () -> Unit, settingsP
                     modifier = Modifier
                         .align(alignment = Alignment.Center)
                         .offset(
-                            x = 0.1918792724609375.dp,
+                            x = 15.191879272460938.dp,
                             y = 22.dp
                         )
                         .requiredWidth(width = 107.dp)
