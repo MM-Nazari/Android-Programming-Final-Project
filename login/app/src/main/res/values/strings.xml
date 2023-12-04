@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">mmnazari_s_application1</string>
+    <string name="loading">Loading…</string>
+    <string name="no_internet_connection">No internet connection!</string>
+<string name="lbl_sign_in">Sign in</string>
+  <string name="lbl_email">Email</string>
+  <string name="msg_already_have_an">Already have an account ? </string>
+  <string name="msg_forget_password">Forget Password ?</string>
+  <string name="msg_don_t_have_acco">Don\u2019t have account ? </string>
+  <string name="msg_confirm_passwor">Confirm Password</string>
+  <string name="lbl_sign_up">Sign Up</string>
+  <string name="lbl_password">Password</string>
+  <string name="msg_email_or_user_n">Email or User Name</string>
+  <string name="lbl_full_name">Full Name</string>
+</resources>
