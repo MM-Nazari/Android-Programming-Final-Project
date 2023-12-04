@@ -1,0 +1,271 @@
+@Composable
+fun SignUp(modifier: Modifier = Modifier) {
+    Box(
+        modifier = modifier
+                .requiredWidth(width = 360.dp)
+                .requiredHeight(height = 838.dp)
+                .background(brush = Brush.linearGradient(
+                    0f to Color(0xffca263a), 
+1f to Color.Black,
+                    start = Offset(180f, 0f),
+                    end = Offset(180f, 838f)))
+        ) {
+        Text(
+            text = "Sign Up",
+            color = Color(0xff620202),
+            style = TextStyle(
+                        fontSize = 30.sp,
+                        fontWeight = FontWeight.Bold),
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 130.dp,
+                                    y = 46.dp))
+        TextButton(
+            onClick = { },
+            colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 37.dp,
+                                    y = 595.dp)
+                        .requiredWidth(width = 286.dp)
+                        .requiredHeight(height = 50.dp)
+            ) {
+            Box(
+                modifier = Modifier
+                                .requiredWidth(width = 286.dp)
+                                .requiredHeight(height = 50.dp)
+                ) {
+                Box(
+                    modifier = Modifier
+                                        .requiredWidth(width = 286.dp)
+                                        .requiredHeight(height = 50.dp)
+                                        .clip(shape = RoundedCornerShape(15.dp))
+                                        .background(color = Color(0xffe50505).copy(alpha = 0.5f)))
+                Text(
+                    text = "Sign Up",
+                    color = Color(0xff340202),
+                    style = TextStyle(
+                                        fontSize = 15.sp,
+                                        fontWeight = FontWeight.Bold),
+                    modifier = Modifier
+                                        .align(alignment = Alignment.TopStart)
+                                        .offset(x = 112.dp,
+                                                            y = 16.dp)
+                                        .requiredWidth(width = 94.dp))
+                }
+            }
+        Box(
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 50.dp,
+                                    y = 685.dp)
+                        .requiredWidth(width = 242.dp)
+                        .requiredHeight(height = 18.dp)
+            ) {
+            Text(
+                text = "Already have an account ? ",
+                color = Color(0xffc70c0c),
+                style = TextStyle(
+                                fontSize = 15.sp),
+                modifier = Modifier
+                                .align(alignment = Alignment.TopCenter)
+                                .offset(x = (-27.5).dp,
+                                                y = 0.dp))
+            Button(
+                onClick = { },
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xffc70c0c)),
+                modifier = Modifier
+                                .align(alignment = Alignment.TopCenter)
+                                .offset(x = 96.dp,
+                                                y = 0.dp)){ }
+            }
+        Box(
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 29.dp,
+                                    y = 202.dp)
+                        .requiredWidth(width = 302.dp)
+                        .requiredHeight(height = 50.dp)
+            ) {
+            Image(
+                painter = painterResource(id = R.drawable.phuserlight),
+                contentDescription = "ph:user-light",
+                colorFilter = ColorFilter.tint(Color(0xff2d0202).copy(alpha = 0.75f)),
+                modifier = Modifier
+                                .align(alignment = Alignment.TopStart)
+                                .offset(x = 6.dp,
+                                                y = 10.dp)
+                                .requiredWidth(width = 26.dp)
+                                .requiredHeight(height = 30.dp))
+            OutlinedTextField(
+                value = "",
+                onValueChange = {},
+                modifier = Modifier
+                                .requiredWidth(width = 302.dp)
+                                .requiredHeight(height = 50.dp)
+                                .clip(shape = RoundedCornerShape(15.dp)))
+            Text(
+                text = "Full Name",
+                color = Color(0xff2d0202).copy(alpha = 0.75f),
+                style = TextStyle(
+                                fontSize = 15.sp),
+                modifier = Modifier
+                                .align(alignment = Alignment.TopStart)
+                                .offset(x = 37.dp,
+                                                y = 16.dp)
+                                .requiredWidth(width = 152.dp))
+            }
+        Box(
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 29.dp,
+                                    y = 382.dp)
+                        .requiredWidth(width = 302.dp)
+                        .requiredHeight(height = 50.dp)
+            ) {
+            IconButton(
+                onClick = { },
+                modifier = Modifier
+                                .align(alignment = Alignment.TopStart)
+                                .offset(x = 273.dp,
+                                                y = 14.dp)
+                ) {
+                Box(
+                    modifier = Modifier
+                                        .requiredWidth(width = 16.dp)
+                                        .requiredHeight(height = 20.dp)
+                    ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.vector),
+                        contentDescription = "Vector",
+                        modifier = Modifier
+                                                .fillMaxSize())
+                    }
+                }
+            Image(
+                painter = painterResource(id = R.drawable.mdipasswordoutline),
+                contentDescription = "mdi:password-outline",
+                colorFilter = ColorFilter.tint(Color(0xff2d0202).copy(alpha = 0.69f)),
+                modifier = Modifier
+                                .align(alignment = Alignment.TopStart)
+                                .offset(x = 7.22314453125.dp,
+                                                y = 10.dp)
+                                .requiredWidth(width = 24.dp)
+                                .requiredHeight(height = 30.dp))
+            OutlinedTextField(
+                value = "",
+                onValueChange = {},
+                modifier = Modifier
+                                .requiredWidth(width = 302.dp)
+                                .requiredHeight(height = 50.dp)
+                                .clip(shape = RoundedCornerShape(15.dp)))
+            Text(
+                text = "Password",
+                color = Color(0xff2d0202).copy(alpha = 0.69f),
+                style = TextStyle(
+                                fontSize = 15.sp),
+                modifier = Modifier
+                                .align(alignment = Alignment.TopStart)
+                                .offset(x = 37.dp,
+                                                y = 15.dp)
+                                .requiredWidth(width = 85.dp))
+            }
+        Box(
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 29.dp,
+                                    y = 472.dp)
+                        .requiredWidth(width = 302.dp)
+                        .requiredHeight(height = 50.dp)
+            ) {
+            IconButton(
+                onClick = { },
+                modifier = Modifier
+                                .align(alignment = Alignment.TopStart)
+                                .offset(x = 273.dp,
+                                                y = 17.dp)
+                ) {
+                Box(
+                    modifier = Modifier
+                                        .requiredWidth(width = 16.dp)
+                                        .requiredHeight(height = 20.dp)
+                    ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.vector),
+                        contentDescription = "Vector",
+                        modifier = Modifier
+                                                .fillMaxSize())
+                    }
+                }
+            Image(
+                painter = painterResource(id = R.drawable.mdipasswordoutline),
+                contentDescription = "mdi:password-outline",
+                colorFilter = ColorFilter.tint(Color(0xff2d0202).copy(alpha = 0.67f)),
+                modifier = Modifier
+                                .align(alignment = Alignment.TopStart)
+                                .offset(x = 7.222900390625.dp,
+                                                y = 10.dp)
+                                .requiredWidth(width = 24.dp)
+                                .requiredHeight(height = 30.dp))
+            OutlinedTextField(
+                value = "",
+                onValueChange = {},
+                modifier = Modifier
+                                .requiredWidth(width = 302.dp)
+                                .requiredHeight(height = 50.dp)
+                                .clip(shape = RoundedCornerShape(15.dp)))
+            Text(
+                text = "Confirm Password",
+                color = Color(0xff2d0202).copy(alpha = 0.67f),
+                style = TextStyle(
+                                fontSize = 15.sp),
+                modifier = Modifier
+                                .align(alignment = Alignment.TopStart)
+                                .offset(x = 36.dp,
+                                                y = 17.dp)
+                                .requiredWidth(width = 141.dp))
+            }
+        Box(
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 29.dp,
+                                    y = 292.dp)
+                        .requiredWidth(width = 302.dp)
+                        .requiredHeight(height = 50.dp)
+            ) {
+            Image(
+                painter = painterResource(id = R.drawable.icoutlineemail),
+                contentDescription = "ic:outline-email",
+                colorFilter = ColorFilter.tint(Color(0xff2d0202).copy(alpha = 0.72f)),
+                modifier = Modifier
+                                .align(alignment = Alignment.TopStart)
+                                .offset(x = 6.420654296875.dp,
+                                                y = 10.dp)
+                                .requiredWidth(width = 24.dp)
+                                .requiredHeight(height = 30.dp))
+            OutlinedTextField(
+                value = "",
+                onValueChange = {},
+                modifier = Modifier
+                                .requiredWidth(width = 302.dp)
+                                .requiredHeight(height = 50.dp)
+                                .clip(shape = RoundedCornerShape(15.dp)))
+            Text(
+                text = "Email",
+                color = Color(0xff2d0202).copy(alpha = 0.72f),
+                style = TextStyle(
+                                fontSize = 15.sp),
+                modifier = Modifier
+                                .align(alignment = Alignment.TopStart)
+                                .offset(x = 37.dp,
+                                                y = 15.dp)
+                                .requiredWidth(width = 57.dp))
+            }
+        }
+ }
+
+@Preview(widthDp = 360, heightDp = 838)
+@Composable
+private fun SignUpPreview() {
+    SignUp(Modifier)
+ }
