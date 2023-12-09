@@ -1,0 +1,93 @@
+@Composable
+fun Contacts(modifier: Modifier = Modifier) {
+    Box(
+        modifier = modifier
+                .requiredWidth(width = 360.dp)
+                .requiredHeight(height = 838.dp)
+                .background(brush = Brush.linearGradient(
+                    0f to Color(0xffca263a), 
+1f to Color.Black,
+                    start = Offset(180f, 0f),
+                    end = Offset(180f, 838f)))
+        ) {
+        Text(
+            text = "Contacts",
+            color = Color(0xff5e0707),
+            style = TextStyle(
+                        fontSize = 30.sp,
+                        fontWeight = FontWeight.Bold),
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 108.dp,
+                                    y = 46.dp))
+        OutlinedTextField(
+            value = "",
+            onValueChange = {},
+            label = {
+            Text(
+            text = "Name",
+            color = Color(0xff340303).copy(alpha = 0.78f),
+            style = TextStyle(
+                        fontSize = 15.sp),
+            modifier = Modifier
+                        .requiredHeight(height = 18.dp))
+            },
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 27.dp,
+                                    y = 232.dp)
+                        .requiredWidth(width = 307.dp)
+                        .requiredHeight(height = 51.dp))
+        OutlinedTextField(
+            value = "",
+            onValueChange = {},
+            label = {
+            Text(
+            text = "Number",
+            color = Color(0xff340303).copy(alpha = 0.75f),
+            style = TextStyle(
+                        fontSize = 15.sp),
+            modifier = Modifier
+                        .requiredHeight(height = 18.dp))
+            },
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 27.dp,
+                                    y = 323.dp)
+                        .requiredWidth(width = 307.dp)
+                        .requiredHeight(height = 48.dp))
+        Box(
+            modifier = Modifier
+                        .align(alignment = Alignment.TopStart)
+                        .offset(x = 84.dp,
+                                    y = 419.dp)
+                        .requiredWidth(width = 193.dp)
+                        .requiredHeight(height = 50.dp)
+            ) {
+            Button(
+                onClick = { },
+                shape = RoundedCornerShape(15.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xffb11212).copy(alpha = 0.97f)),
+                modifier = Modifier
+                                .requiredWidth(width = 193.dp)
+                                .requiredHeight(height = 50.dp)){ }
+            Text(
+                text = "Add",
+                color = Color(0xff310202),
+                style = TextStyle(
+                                fontSize = 15.sp,
+                                fontWeight = FontWeight.Bold),
+                modifier = Modifier
+                                .align(alignment = Alignment.TopStart)
+                                .offset(x = 80.97900390625.dp,
+                                                y = 16.dp)
+                                .requiredWidth(width = 63.dp))
+            }
+        }
+ }
+
+@Preview(widthDp = 360, heightDp = 838)
+@Composable
+private fun ContactsPreview() {
+    Contacts(Modifier)
+ }
