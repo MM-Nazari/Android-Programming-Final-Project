@@ -61,25 +61,12 @@ public class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ContextHandler.set(applicationContext)
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED){
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED ||
+            ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(
                 this,
-                arrayOf(Manifest.permission.SEND_SMS),
+                arrayOf(Manifest.permission.SEND_SMS, Manifest.permission.ACCESS_FINE_LOCATION),
                 2
-            )
-        }
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(
-                this,
-                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
-                3
-            )
-        }
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(
-                this,
-                arrayOf(Manifest.permission.CALL_PHONE),
-                4
             )
         }
         locManager.locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
@@ -151,13 +138,7 @@ private fun sendSMS(priority: String) {
             null
         )
     }
-    val iterate2 = SettingsPageActivity.cContactList.chosenContactsList.iterator()
-    while (iterate2.hasNext()) {
-        val nextContact = iterate2.next()
-        val phoneNumber = nextContact.phoneNumber
-        makeMissCall(phoneNumber)
-        Thread.sleep(10_000)
-    }
+    makeMissCall(ContactsPageActivity.mostImportantContact.chosenContact)
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

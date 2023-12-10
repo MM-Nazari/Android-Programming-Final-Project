@@ -43,6 +43,9 @@ import java.time.format.TextStyle
 
 class ContactsPageActivity : ComponentActivity() {
     private val viewModel by viewModels<ReadContactViewModel>()
+    object mostImportantContact {
+        var chosenContact = ""
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ContextHandler.set(applicationContext)
@@ -82,6 +85,9 @@ class ReadContactViewModel : ViewModel() {
 
     fun readContacts(phoneNumber: String, contactName: String){
         SettingsPageActivity.cContactList.chosenContactsList.add(Contacts(contactName, phoneNumber))
+        if(SettingsPageActivity.cContactList.chosenContactsList.size == 1){
+            ContactsPageActivity.mostImportantContact.chosenContact = phoneNumber
+        }
         val context = ContextHandler.get()
         if (context != null) {
             Toast.makeText(context,
@@ -116,6 +122,17 @@ fun Contacts(modifier: Modifier = Modifier, updateFieldValue: (Short, String) ->
                 .align(alignment = Alignment.TopStart)
                 .offset(x = 108.dp,
                     y = 46.dp))
+        Text(
+            text = "first one: the most important one",
+            color = Color(0xff5e0707),
+            style = androidx.compose.ui.text.TextStyle(
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Bold
+            ),
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = 30.dp,
+                    y = 100.dp))
         TextField(
             value = contactName,
             onValueChange = {contactName = it
