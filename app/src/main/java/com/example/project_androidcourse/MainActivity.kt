@@ -49,6 +49,30 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.core.content.getSystemService
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import org.telegram.telegrambots.bots.TelegramLongPollingBot
+import org.telegram.telegrambots.meta.TelegramBotsApi
+import org.telegram.telegrambots.meta.api.methods.send.SendMessage
+import org.telegram.telegrambots.meta.api.objects.Update
+import org.telegram.telegrambots.meta.exceptions.TelegramApiException
+import org.telegram.telegrambots.updatesreceivers.DefaultBotSession
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
+import retrofit2.http.POST
+import retrofit2.http.Query
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
+interface TelegramBotService {
+    @FormUrlEncoded
+    @POST("sendMessage")
+    fun sendMessage(
+        @Query("chat_id") chatId: String,
+        @Query("text") text: String
+    ): String
+}
 
 public class MainActivity : ComponentActivity() {
     private val viewModel by viewModels<MainActivityViewModel>()
@@ -124,6 +148,43 @@ private fun makeMissCall(phoneNumber: String){
     MainActivity.instance.context.startActivity(intent)
 }
 
+private fun sendMessageTelegram(userName: String, chatId: String, priority: String){
+    /*val bot = object : TelegramLongPollingBot(){
+        override fun getBotToken(): String {
+            return "6477692240:AAGTWzQHKM7syt8q6fX2lZrQ3jjGKXMx8AQ"
+        }
+
+        override fun getBotUsername(): String {
+            return "PDPSOSBot"
+        }
+
+        override fun onUpdateReceived(update: Update?) {
+            TODO("Not yet implemented")
+            //implemented in python file
+        }
+    }
+    val sendMessage = SendMessage()
+    var locationLink = getLocation()
+    sendMessage.chatId = chatId
+    sendMessage.text = "Hi ${userName}\nI need your help\nlast known location:$locationLink\nPriority:$priority\nfrom SOS App"
+    try{
+        val botsApi = TelegramBotsApi(DefaultBotSession::class.java)
+        botsApi.registerBot(bot)
+        bot.execute(sendMessage)
+    } catch (e: TelegramApiException){
+        e.printStackTrace()
+    }*/
+    var locationLink = getLocation()
+    var messageText = "message from: ${userName}\nI need your help\nlast known location:$locationLink\nPriority:$priority\nfrom SOS App"
+    val retrofit = Retrofit.Builder()
+        .baseUrl("https://api.telegram.org/bot6477692240:AAGTWzQHKM7syt8q6fX2lZrQ3jjGKXMx8AQ/")  // Replace <YourBotToken> with your actual bot token
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+
+    val telegramBotService = retrofit.create(TelegramBotService::class.java)
+    telegramBotService.sendMessage(chatId, messageText)
+}
+
 private fun sendSMS(priority: String) {
     var locationLink = getLocation()
     var obj = SmsManager.getDefault()
@@ -138,6 +199,7 @@ private fun sendSMS(priority: String) {
             null
         )
     }
+    sendMessageTelegram("arash", "133792179", priority)
     makeMissCall(ContactsPageActivity.mostImportantContact.chosenContact)
 }
 
@@ -150,10 +212,10 @@ fun MainPage(modifier: Modifier = Modifier, settingsPage: () -> Unit) {
             .requiredHeight(height = 838.dp)
             .background(
                 brush = Brush.linearGradient(
-                    0f to Color(0xffca263a),
+                    0f to Color(0xFFFFFFFF/*0xffca263a*/),
                     1f to Color.Black,
                     start = Offset(180f, 0f),
-                    end = Offset(180f, 838f)
+                    end = Offset(180f, 1838f)
                 )
             )
     ) {
