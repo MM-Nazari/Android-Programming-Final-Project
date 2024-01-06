@@ -106,10 +106,10 @@ fun Contacts(modifier: Modifier = Modifier, updateFieldValue: (Short, String) ->
             .requiredWidth(width = 360.dp)
             .requiredHeight(height = 838.dp)
             .background(brush = Brush.linearGradient(
-                0f to Color(0xffca263a),
+                0f to Color(0xFFFFFFFF),
                 1f to Color.Black,
                 start = Offset(180f, 0f),
-                end = Offset(180f, 838f)))
+                end = Offset(180f, 1838f)))
     ) {
         Text(
             text = "Contacts",

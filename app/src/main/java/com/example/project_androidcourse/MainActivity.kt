@@ -49,6 +49,9 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.core.content.getSystemService
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import org.telegram.telegrambots.bots.TelegramLongPollingBot
 import org.telegram.telegrambots.meta.TelegramBotsApi
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage
@@ -65,10 +68,19 @@ import retrofit2.http.Query
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+fun getSOSmessgae(username:String): String {
+    val context = ContextHandler.get()
+    val databaseDao = context?.let { SOSDatabase.getDatabase(it).getDatabaseDao() }
+    var message = databaseDao?.getmessageByUsername(username)
+    if(message == null){
+        return "کمک"
+    }
+    return message
+}
+
 interface TelegramBotService {
-    @FormUrlEncoded
     @POST("sendMessage")
-    fun sendMessage(
+    suspend fun sendMessage(
         @Query("chat_id") chatId: String,
         @Query("text") text: String
     ): String
@@ -182,7 +194,9 @@ private fun sendMessageTelegram(userName: String, chatId: String, priority: Stri
         .build()
 
     val telegramBotService = retrofit.create(TelegramBotService::class.java)
-    telegramBotService.sendMessage(chatId, messageText)
+    CoroutineScope(Dispatchers.IO).launch {
+        telegramBotService.sendMessage(chatId, messageText)
+    }
 }
 
 private fun sendSMS(priority: String) {

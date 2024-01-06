@@ -39,6 +39,7 @@ import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -108,6 +109,14 @@ class SettingPageViewModel: ViewModel() {
     }
 }
 
+fun showGuide(){
+    val context = ContextHandler.get()
+    if (context != null) {
+        Toast.makeText(context,
+            "tell your contacts go to @PDPSOSBot in Telegram, save your username for getting help messages there", Toast.LENGTH_SHORT).show()
+    }
+}
+
 @Composable
 fun SettingsPage(modifier: Modifier = Modifier,  addSosStarter: () -> Unit, addContactStareter:() -> Unit) {
     Box(
@@ -116,10 +125,10 @@ fun SettingsPage(modifier: Modifier = Modifier,  addSosStarter: () -> Unit, addC
             .requiredHeight(height = 834.dp)
             .background(
                 brush = Brush.linearGradient(
-                    0f to Color(0xffc72c3f),
+                    0f to Color(0xFFFFFFFF),
                     1f to Color.Black,
                     start = Offset(180f, 0f),
-                    end = Offset(180f, 834f)
+                    end = Offset(180f, 1834f)
                 )
             )
         ) {
@@ -206,7 +215,7 @@ fun SettingsPage(modifier: Modifier = Modifier,  addSosStarter: () -> Unit, addC
                         .requiredHeight(height = 65.dp)
             ) {
             TextButton(
-                onClick = { },
+                onClick = { showGuide()},
                 colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
                 modifier = Modifier
                                 .requiredWidth(width = 68.dp)
