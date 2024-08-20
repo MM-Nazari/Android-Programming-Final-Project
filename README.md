@@ -10,11 +10,25 @@
 - [Contributors](#contributors)
 
 ## Project Description
-SOS is an Android application designed to provide a quick and efficient way to alert your chosen contacts when you feel unsafe. The app allows users to send an SMS with a chosen text, including their live location, to selected contacts. It also supports sending this information via Telegram using a bot. The app provides three threat levels—high, medium, and low—allowing users to communicate the severity of the situation.
+SOS is an Android application designed to provide a quick and efficient way to alert your chosen contacts when you feel unsafe. The app allows users to send an SMS with a chosen text, including their live location, to selected contacts. It also supports sending this information via Telegram using a bot. The app provides three threat levels—high, medium, and low—allowing users to communicate the severity of the situation. <br />
+The Proposal is in [Proposal](./Proposal.pdf) <br />
+The Final Report description is in [Final Report Description](./FinalReport.pdf) <br />
+The implemented Report is in [Final Report](./FinalReport_9931005_9931007_9931061.pdf)
 
 ### Branch Information
-The code for this project is available on the `bug-fix` branch. Please switch to that branch to see the latest updates.
-[View the `bug-fix` branch](https://github.com/MM-Nazari/Compiler-Final-Project/tree/bug-fix)
+The code for this project including telegram bot is available on the `master` branch. Please switch to that branch to see the latest updates.
+[View the `master` branch](https://github.com/MM-Nazari/Android-programming-Final-Project/tree/master) <br />
+The code for this project including authentication is available on the `pishNoskhe` branch. Please switch to that branch to see the latest updates.
+[View the `pishNoskhe` branch](https://github.com/MM-Nazari/Android-programming-Final-Project/tree/pishNoskhe) <br />
+
+### Dependencies
+This project uses the following libraries:
+- [Figma]()
+- [Jetpack Compose](https://developer.android.com/jetpack/compose)
+- [ServerAPI]()
+- [Room]()
+- [SMSManager]()
+- [LocationManager]()
 
 ## Features
 - **Send Emergency SMS**: Quickly send a custom message with your live location to your chosen contacts.
@@ -47,11 +61,6 @@ Include screenshots of your UI to give users a visual idea of your app. You can 
 ![Dashboard](path_to_screenshot/dashboard.png)
 
 To display the images, upload them to your repository (if not already done) and provide the correct path.
-
-### Dependencies
-This project uses the following libraries:
-
-- [Jetpack Compose](https://developer.android.com/jetpack/compose)
 
 ## IDE
 This project is developed using Android Studio.
