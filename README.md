@@ -55,7 +55,7 @@ This project uses the following libraries:
 Include screenshots of your UI to give users a visual idea of your app. You can display them like this:
 
 **Sign Up Screen**
-![Sign Up Screen](./screenshots/Sign%20Up.jpg)
+![Sign Up Screen](./screenshots/Sign%20Up.png)
 
 **Login Screen**
 ![Login Screen](./screenshots/sign%20in.jpg)
