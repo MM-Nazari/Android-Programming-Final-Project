@@ -1,8 +1,41 @@
-
 # SOS
 
-**Description:**
+## Table of Contents
+- [Project Description](#project-description)
+- [IDE](#ide)
+- [Installation](#installation)
+- [Contributors](#contributors)
+
+## Project Description
 SOS is an Android application designed to provide a quick and efficient way to alert your chosen contacts when you feel unsafe. The app allows users to send an SMS with a chosen text, including their live location, to selected contacts. It also supports sending this information via Telegram using a bot. The app provides three threat levels—high, medium, and low—allowing users to communicate the severity of the situation.
+
+
+
+## Branch Information
+The code for this project is available on the `bug-fix` branch. Please switch to that branch to see the latest updates.
+[View the `bug-fix` branch](https://github.com/MM-Nazari/Compiler-Final-Project/tree/bug-fix)
+
+## Dependencies
+This project uses the following libraries:
+
+- [antlr](https://www.antlr.org/)
+
+## IDE
+This project is developed using Android Studio.
+
+## Installation
+Step-by-step instructions on how to get the development environment running:
+
+### Steps
+1. Clone repository to your local system.
+2. Launch Android Studio.
+3. Click on File > Open.
+4. Navigate to the folder where you cloned the repository and select the project folder.
+5. Click the Run button ![Run Image](./Pycharm_Run.PNG) to start the project.
+
+## Contributors
+- [Arash Asghari](https://github.com/Ali-Noroozbeigy)
+- [Mojtaba Bizarar](https://github.com/Ali-Noroozbeigy)
 
 ### 2. Features
 - **Send Emergency SMS**: Quickly send a custom message with your live location to your chosen contacts.
@@ -77,5 +110,3 @@ You can also link directly to the repository:
 [View the repository](https://github.com/yourusername/sos/tree/master)
 ```
 
-### 7. Contributing
-If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
