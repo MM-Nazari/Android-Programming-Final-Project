@@ -54,6 +54,18 @@ This project uses the following libraries:
 ## Screenshots
 Include screenshots of your UI to give users a visual idea of your app. You can display them like this:
 
+<div style="display: flex; justify-content: space-around;">
+  <div style="text-align: center;">
+    <img src="./screenshots/Sign%20Up.png" alt="Login Screen" style="width: 45%;"/>
+    <p>Login Screen</p>
+  </div>
+  <div style="text-align: center;">
+    <img src="screenshots/sign%20in.jpg" alt="Dashboard" style="width: 45%;"/>
+    <p>Dashboard</p>
+  </div>
+</div>
+
+
 
 | Login Screen | Dashboard |
 |:------------:|:---------:|
