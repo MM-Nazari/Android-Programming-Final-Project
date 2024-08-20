@@ -23,12 +23,12 @@ The code for this project including authentication is available on the `pishNosk
 
 ### Dependencies
 This project uses the following libraries:
-- [Figma]()
+- [Figma](https://www.figma.com/)
 - [Jetpack Compose](https://developer.android.com/jetpack/compose)
-- [ServerAPI]()
-- [Room]()
-- [SMSManager]()
-- [LocationManager]()
+- [ServerAPI](https://pymongo.readthedocs.io/en/stable/api/pymongo/server_api.html)
+- [Room](https://developer.android.com/training/data-storage/room/)
+- [SMSManager](https://developer.android.com/reference/android/telephony/SmsManager)
+- [LocationManager](https://developer.android.com/reference/android/location/Location)
 
 ## Features
 - **Send Emergency SMS**: Quickly send a custom message with your live location to your chosen contacts.
@@ -77,7 +77,7 @@ Step-by-step instructions on how to get the development environment running:
 6. Click the Run button ![Run Image](./Visual-Studio_Run.PNG) to start the project.
 
 ## Contributors
-- [Arash Asghari](https://github.com/Ali-Noroozbeigy)
-- [Mojtaba Bizarar](https://github.com/Ali-Noroozbeigy)
+- [Arash Asghari](https://github.com/arashari44)
+- [Mojtaba Bizarar](https://github.com/mojtababizarar)
 
 
