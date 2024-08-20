@@ -55,7 +55,7 @@ This project uses the following libraries:
 Include screenshots of your UI to give users a visual idea of your app. You can display them like this:
 
 | Sign Up Screen | Log in | Home | Settings | Add Contact | Add Text | SMS | Telegram Bot |
-|:------------:|:---------:|
+|:------------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
 | ![Sign Up Screen](./screenshots/Sign%20Up.png) | ![Log in](./screenshots/sign%20in.jpg) | ![Home](./screenshots/Home.png) | ![Settings](./screenshots/settings.jpg) | ![Add Contact](./screenshots/add_contact.jpg) | ![Add Text](./screenshots/add_text.jpg) | ![SMS](./screenshots/sms.jpg) | ![Telegram Bot](./screenshots/bot.jpg) |
 | *Sign Up Screen* | *Log in* | *Home* | *Settings* | *Add Contact* | *Add Text* | *SMS* | *Telegram Bot* |
 
