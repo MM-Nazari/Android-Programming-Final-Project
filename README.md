@@ -54,13 +54,11 @@ This project uses the following libraries:
 ## Screenshots
 Include screenshots of your UI to give users a visual idea of your app. You can display them like this:
 
+**Sign Up Screen**
+![Sign Up Screen](./screenshots/Sign%20Up.jpg)
+
 **Login Screen**
-![Login Screen](path_to_screenshot/login.png)
-
-**Main Dashboard**
-![Dashboard](path_to_screenshot/dashboard.png)
-
-To display the images, upload them to your repository (if not already done) and provide the correct path.
+![Login Screen](./screenshots/sign%20in.jpg)
 
 ## IDE
 This project is developed using Android Studio.
